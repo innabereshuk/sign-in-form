@@ -30,7 +30,7 @@ body {
     color: #fff;
     font-weight: 600;
     display: flex;
-    margin: 15% auto;
+    margin: 10% auto;
     position: relative;
 }
 
@@ -39,11 +39,11 @@ body {
     width: 400px;
     height: 500px;
     margin: auto;
-    background: linear-gradient(-145deg, #c370d7 0%, #2c20a7 75%);
-    opacity: .85;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
     box-shadow: -1px 10px 20px #14293f;
     padding: 45px 70px;
-     
  }
 
  #toregister {	
