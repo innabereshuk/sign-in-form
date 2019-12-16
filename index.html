@@ -10,51 +10,51 @@
     <script src="https://kit.fontawesome.com/d357e3b57e.js" crossorigin="anonymous"></script>
     </head>
     <body>
-        <section class="container">
-            <img src="image.png" alt="">
-                <div id="wrapper">
-                    <label class="link-big link-login" for="a1">Sign in</label><input type="radio" name="a" id="a1" value="1" checked data-target="tologin">
-                    <label class="link-big link-register" for="a2">Join us</label><input type="radio" name="a" id="a2" value="2" data-target="toregister">
-                    <div id="tologin" class="animate form">
-                        <form action="#" method="GET">
-                            <p>
-                                <label for="name">Username</label>
-                                <input class="line" type="text" name="username" id="name" required>
-                            </p>
-                            <p>
-                                <label for="password">Password</label>
-                                <input class="line" type="password" name="password" id="password" minlength="3" required> 
-                            </p>
-                            <p>
-                                <label class="checked" for="checked"> 
-                                <input type="checkbox" id="checked">Keep me signed in</label>
-                            </p>
-                            <button type="button" class="line line--button">Sign in</button> 
-                            <a class="link-sm link-sm-margin" href="#">Forgot password</a>
-                            <a href="#" class="link-sm">Create an account</a>
-                        </form> 
-                    </div>
-                        
-                    <div id="toregister" class="animate form">
-                        <form action="#" method="GET">
-                            <p>
-                                <label for="name">Username</label>
-                                <input class="line" type="text" name="username" id="name--register" autofocus required>
-                            </p>
-                            <p>
-                                <label for="password">Password</label>
-                                <input class="line" type="password" name="password" id="password--register" minlength="3" required>  
-                            </p>    
-                            <p>
-                                <label for="password-repeat">Password repeat</label>
-                                <input class="line" type="password" name="password" id="password-repeat">
-                            </p>
-                            <button type="button" class="line line--button">Join us</button> 
-                            <a href="#" class="link-sm link-sm-margin">Forgot password</a>
-                            <a class="link-sm" href="#">Create an account</a>
-                        </form>
-                    </div>
+        <section class="container" style="background-image: url(image.png);">
+            <div id="wrapper">
+                <label class="link-big link-login" for="a1">Sign in</label>
+                <input type="radio" name="a" id="a1" value="1" checked data-target="tologin">
+                <label class="link-big link-register" for="a2">Join us</label>
+                <input type="radio" name="a" id="a2" value="2" data-target="toregister">
+                                        
+                <div id="tologin" class="animate form">
+                    <form name="entrance" action="#" method="POST">
+                        <p>
+                            <label for="name">Username</label>
+                            <input class="line" type="text" name="username" id="name" required>
+                        </p>
+                        <p>
+                            <label for="password">Password</label>
+                            <input class="line" type="password" name="password" id="password" minlength="3" required> 
+                        </p>
+                        <p>
+                            <label class="checked" for="checked"> 
+                            <input type="checkbox" id="checked"><span></span> Keep me signed in</label>
+                        </p>
+                            <button type="submit" class="line line--button">Sign in</button> 
+                    </form> 
                 </div>
+                            
+                <div id="toregister" class="animate form">
+                    <form name="registration" action="#" method="POST">
+                        <p>
+                            <label for="name">Username</label>
+                            <input class="line" type="text" name="username" id="name--register" autofocus required>
+                        </p>
+                        <p>
+                            <label for="password">Password</label>
+                            <input class="line" type="password" name="password" id="password--register" minlength="3" required>  
+                        </p>    
+                        <p>
+                            <label for="password-repeat">Password repeat</label>
+                            <input class="line" type="password" name="password" id="password-repeat">
+                        </p>
+                        <button type="button" class="line line--button">Join us</button> 
+                    </form>
+                </div>
+                <a class="link-sm link-sm-margin" href="#">Forgot password</a>
+                <a href="#" class="link-sm">Create an account</a>
+            </div>
         </section>
     </body>
 </html>

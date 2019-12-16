@@ -24,39 +24,33 @@ body {
     width: 800px;
     height: 600px;
     background-color: #fff;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
     color: #fff;
     font-weight: 600;
     display: flex;
-    margin: 5% auto;
+    margin: 15% auto;
     position: relative;
-     
 }
-
 
 #wrapper  {
     display: block;
     width: 400px;
     height: 500px;
     margin: auto;
-    background: linear-gradient(-145deg, #b86bd5 0%, #2e21ab 75%);
+    background: linear-gradient(-145deg, #c370d7 0%, #2c20a7 75%);
+    opacity: .85;
     box-shadow: -1px 10px 20px #14293f;
     padding: 45px 70px;
+     
  }
-
- 
-img {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    opacity: .5;
-}
 
  #toregister {	
     position: absolute;
     top: 50%;
     left: 50%;
-    transform: translate(-50%, -40%);
+    transform: translate(-50%, -50%);
     
 }
 
@@ -64,9 +58,12 @@ img {
     position: absolute;
     top: 50%;
     left: 50%;
-    transform: translate(-50%, -40%);
+    transform: translate(-50%, -50%);
     
 }  
+#a1, #a2 {
+    display: none;
+}
 
 
 
@@ -78,7 +75,7 @@ img {
     opacity: .7;
     text-decoration: none;
     margin-bottom: 40px;
-}
+  }
 
 .link-login:hover,
 .link-login:focus,
@@ -110,7 +107,7 @@ a:active {
 
 .link-big {
     font-size: 1.6rem;
-    margin-right: 2rem;
+    margin-right: 3rem;
 } 
 
 
@@ -123,17 +120,20 @@ a:active {
 
 .link-sm {
     border-bottom: 1px solid rgba(255, 255, 255, .4);
+    margin-top: 32rem;
+    
 }
 
 
 .link-sm-margin {
     margin-right: 2rem;
+ 
 }
 
  label,
  input {
      font-size: 1.6rem;
- }
+  }
 
 
 input {
@@ -150,12 +150,34 @@ input:active {
 }
 
 
-input[type="checkbox"] {
+label input[type="checkbox"] {
+    display: none;/* <--скрываем дефолтный чекбокс */
+  }
+  .checked span {/* <-- стилизируем новый */
+    height: 14px;
+    width: 14px;
     margin-right: 9px;
-}
+    border: 1px solid gray;
+    display: inline-block;
+    position: relative;
+    background-color:rgba(255, 255, 255, 0.6);
+    overflow: hidden;
+    border-radius: 2px;
+  }
 
+  [type=checkbox]:checked + span:before {/* <-- ставим иконку, когда чекбокс включен  */
+    content: '\2714';
+    position: absolute;
+    left: 0;
+    top: -8px;
+    font-size: 15px;
+    font-weight: 500;
+    color:rgba(255, 255, 255, 0.9);
+    background-color: #23ae92;
+  }
+  
 .line--button {
-    background: #23ae92;
+    background-color: #23ae92;
     opacity: 1;
     color: #fff;
     font-size: 1.8rem;
@@ -194,27 +216,7 @@ input[data-target="toregister"]:checked ~ #tologin {
 
 
 
-input[data-target="tologin"]:checked ~ #tologin {
-    display: block;
-}
 
-input[data-target="tologin"]:checked ~ #toregister {
-    display: none;
-}
- 
-
-input[data-target="toregister"]:checked ~ #toregister {
-    display: block;
-}
-
-input[data-target="toregister"]:checked ~ #tologin {
-    display: none;
-}
-
-/* #wrapper input.hidden {
-    display: none;
-} 
-      */
     
     
 
